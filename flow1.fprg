@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="flow1"/>
+        <attribute name="authors" value="MCS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-11-04 08:26:08 PM"/>
+        <attribute name="created" value="TUNTO0RFU0tUT1AtMUdIMUpEODsyMDI2LTExLTA0OzA1OjM3OjAwIFBNOzI1MjQ="/>
+        <attribute name="edited" value="TUNTO0RFU0tUT1AtMUdIMUpEODsyMDI2LTExLTA0OzA4OjI2OjA4IFBNOzE7MjY0MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;welcome to community waste collection and reporting system&quot;" newline="True"/>
+            <output expression="&quot;please enter the date&quot;" newline="True"/>
+            <declare name="date" type="String" array="False" size=""/>
+            <input variable="date"/>
+            <output expression="&quot;please enter location&quot;" newline="True"/>
+            <declare name="location" type="String" array="False" size=""/>
+            <input variable="location"/>
+            <output expression="&quot;please enter wasteType&quot;" newline="True"/>
+            <declare name="wasteType" type="String" array="False" size=""/>
+            <input variable="wasteType"/>
+            <output expression="&quot;please enter description&quot;" newline="True"/>
+            <declare name="description" type="String" array="False" size=""/>
+            <input variable="description"/>
+            <if expression="location=&quot;&quot; or wasteType=&quot;&quot; or description=&quot;&quot;">
+                <then>
+                    <output expression="&quot;some information is missing&quot;" newline="True"/>
+                    <output expression="&quot;please enter all required information&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;All information has been provided&quot;" newline="True"/>
+                    <output expression="&quot;Report saved successfully&quot;" newline="True"/>
+                </else>
+            </if>
+            <declare name="reportStatus" type="String" array="False" size=""/>
+            <assign variable="reportStatus" expression="&quot;pending&quot;"/>
+            <output expression="&quot;your waste report has been submitted successfully&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
